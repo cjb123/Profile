@@ -1,11 +1,84 @@
 
 
 .intro-texts {
-    background: white;
-    font-size: 32px;
-    text-align: center;
-    align-items: center;
-    display: flex;
-    justify-content: center;
     height: 100%;
+    width: 100%;
+    background: white;
+    .introducing {
+    font-size: 24px;
+    text-align: center;
+    top: 50%;
+    width: 30%;
+    position: absolute;
+    left: 40%;
+    background: white;
+    }
+    .intro-animation {
+        animation: moveLeft 5s ease-in-out forwards, incSize 2s linear 6s forwards, disappear 2s linear 8s forwards;
+    }
+    .name {
+        background: white;
+        position: absolute;
+        top: 40%;
+        width: 30%;
+        left: 40%;
+        visibility: hidden;
+        animation: show 2s ease-in-out 10s forwards;
+        .kantora {
+            background-color: white;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+       transform: translateX(0);
+    }
+    100% {
+       transform: translateX(-5px);
+    }
+}
+
+@keyframes incSize {
+    0% {
+        font-size: 24px;
+     }
+     100% {
+        font-size: 36px;
+     }
+}
+
+@keyframes disappear {
+    0%, 20% {
+        opacity: 0.8;
+
+    }
+
+    30%, 40% {
+        opacity: 0.6;
+    }
+    50%, 60% {
+        opacity: 0.4;
+    }
+    70%, 80% {
+        opacity: 0.2;
+    }
+    100% {
+       visibility: hidden;
+       height: 0;
+       width: 0;
+       opacity: 0;
+    }
+}
+
+@keyframes show {
+    0% {
+    //    visibility: h;
+    }
+    100% {
+       visibility: visible;
+    }
 }

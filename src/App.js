@@ -12,7 +12,7 @@ function App() {
         setCoverOpen(false)
        } else {
        setCoverOpen(true)
-       } 
+       }
   }
 
   return (
@@ -20,7 +20,7 @@ function App() {
       <div class={`${coverOpen ? 'notebook_animate': ''} notebook`}>
         <div class={`cover ${coverOpen ? 'cover_animation' : coverOpen === false ? 'cover_animation_close': ''}`} onClick={handleclickCover}></div>
         <div class="page one">
-          <IntroTexts />
+          <IntroTexts coverOpen/>
         </div>
         <div class="page two"></div>
         <div class="page three"></div>
