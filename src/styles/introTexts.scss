@@ -1,84 +1,189 @@
-
-
 .intro-texts {
     height: 100%;
     width: 100%;
     background: white;
+
     .introducing {
-    font-size: 24px;
-    text-align: center;
-    top: 50%;
-    width: 30%;
-    position: absolute;
-    left: 40%;
-    background: white;
+        font-size: 24px;
+        text-align: center;
+        top: 50%;
+        width: 30%;
+        position: absolute;
+        left: 40%;
+        background: white;
     }
+
     .intro-animation {
         animation: moveLeft 5s ease-in-out forwards, incSize 2s linear 6s forwards, disappear 2s linear 8s forwards;
     }
-    .name {
-        background: white;
-        position: absolute;
-        top: 40%;
+
+    .intro-user-name {
+        font-size: 24px;
+        text-align: center;
+        top: 50%;
         width: 30%;
+        position: absolute;
         left: 40%;
+        background: white;
+
         visibility: hidden;
-        animation: show 2s ease-in-out 10s forwards;
-        .kantora {
-            background-color: white;
-            text-align: center;
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
+        // transform: translateX(-5px);
+        animation: showName 2s linear 10s forwards, incSize 2s linear 10s forwards, disappear 2s linear 12s forwards;
     }
 }
 
 @keyframes moveLeft {
     0% {
-       transform: translateX(0);
+        transform: translateX(-0.5px);
     }
+
+    10% {
+        transform: translateX(-1px);
+    }
+
+    20% {
+        transform: translateX(-1.5px);
+    }
+
+    30% {
+        transform: translateX(-2px);
+    }
+
+    40% {
+        transform: translateX(-2.5px);
+    }
+
+    50% {
+        transform: translateX(-3px);
+    }
+
+    60% {
+        transform: translateX(-3.5);
+    }
+
+    70% {
+        transform: translateX(-4px);
+    }
+
+    80% {
+        transform: translateX(-4.5px);
+    }
+
     100% {
-       transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+}
+
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(0px);
+    }
+
+    10% {
+        transform: translateX(10px);
+    }
+
+    20% {
+        transform: translateX(20px);
+    }
+
+    30% {
+        transform: translateX(30px);
+    }
+
+    40% {
+        transform: translateX(40px);
+    }
+
+    50% {
+        transform: translateX(50px);
+    }
+
+    60% {
+        transform: translateX(60px);
+    }
+
+    70% {
+        transform: translateX(70px);
+    }
+
+    80% {
+        transform: translateX(80px);
+    }
+
+    90% {
+        transform: translateX(90px);
+    }
+
+    100% {
+        transform: translateX(100px);
     }
 }
 
 @keyframes incSize {
     0% {
         font-size: 24px;
-     }
-     100% {
+    }
+
+    100% {
         font-size: 36px;
-     }
+    }
 }
 
 @keyframes disappear {
-    0%, 20% {
+
+    0%,
+    20% {
         opacity: 0.8;
 
     }
 
-    30%, 40% {
+    30%,
+    40% {
         opacity: 0.6;
     }
-    50%, 60% {
+
+    50%,
+    60% {
         opacity: 0.4;
     }
-    70%, 80% {
+
+    70%,
+    80% {
         opacity: 0.2;
     }
+
     100% {
-       visibility: hidden;
-       height: 0;
-       width: 0;
-       opacity: 0;
+        visibility: hidden;
+        opacity: 0;
     }
 }
 
-@keyframes show {
-    0% {
-    //    visibility: h;
+@keyframes showName {
+
+    0%,
+    20% {
+        opacity: 0.2;
     }
+
+    30%,
+    40% {
+        opacity: 0.4;
+    }
+
+    50%,
+    60% {
+        opacity: 0.6;
+    }
+
+    70%,
+    80% {
+        opacity: 0.8;
+    }
+
     100% {
-       visibility: visible;
+        visibility: visible;
+        opacity: 1;
     }
 }
